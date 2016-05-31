@@ -1,10 +1,61 @@
-// Grid system
+/* GRID SYSTEM */
+.row, 
+.site-header .container, 
+.site-footer .container {
+	@include outer-container;
+	text-align: left;
+	@media screen and (max-width: $max-width) {
+		margin-left: 1em;
+		margin-right: 1em;
+	} // end media
+}
 .main {
-  @include make-sm-column($main-sm-columns);
+  @include span-columns(3); // of 3
   .sidebar-primary & {
-    @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
+    @include span-columns(3); // of 3
+	
+	@include media($mini-screen-up) {
+		@include span-columns(4); // of 4
+	} // media
+	
+	@include media($medium-screen-up) {
+		@include span-columns(4); // of 6
+	} // media
+	
+	@include media($large-screen-up) {
+		@include span-columns(9); // of 12
+	} // media
   }
 }
 .sidebar {
-  @include make-sm-column($sidebar-sm-columns);
+    @include span-columns(3); // of 3
+	
+	@include media($mini-screen-up) {
+		@include span-columns(4); // of 4
+	} // media
+	
+	@include media($medium-screen-up) {
+		@include span-columns(2); // of 6
+	} // media
+	
+	@include media($large-screen-up) {
+		@include span-columns(3); // of 12
+	} // media
+
+}
+.site-footer .widget {
+    @include span-columns(3); // of 3
+	
+	@include media($mini-screen-up) {
+		@include span-columns(4); // of 4
+	} // media
+	
+	@include media($medium-screen-up) {
+		@include span-columns(2); // of 6
+	} // media
+	
+	@include media($large-screen-up) {
+		@include span-columns(3); // of 12
+	} // media
+
 }

@@ -1,0 +1,20 @@
+/* sidebar */
+.sidebar {
+	margin-bottom: $base-spacing;
+	.widget {
+		margin: 0 0 $base-spacing 0;
+	}
+}
+.widget-title {
+	@extend %h5;
+}
+.widget_archive {
+	ul {
+		color: $secondary-font-color;
+	}
+}
+.widget_recent_comments {
+	ul {
+		color: $secondary-font-color;
+	}
+}

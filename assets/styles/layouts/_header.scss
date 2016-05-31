@@ -1,0 +1,101 @@
+/* #menu-main is the original menu */
+$menu-background-color: $dark-gray;
+$menu-text-color: #fff;
+$menu-selected-color: shade($menu-text-color, 40%);
+
+.slicknav_menu {
+	@include media($medium-screen-up) {
+		display:none;
+	} // media
+}
+#menu-main {
+	display:none;
+	background-color: $menu-background-color;
+	padding: 0.75em 0.25em;
+	a {
+		color: $menu-text-color;
+		padding: 0 0.5em;
+	}
+	> li { // 1st level
+		display: inline-block;
+	}
+	.current-menu-item { // current page
+		a {
+			color: $menu-selected-color;
+		}
+	}
+	@include media($medium-screen-up) {
+		display:block;
+	} // media
+} 
+// on larger screens
+#menu-main .menu-item-has-children {
+  $menu-brakpoint: 50em !default;
+  $sub-menu-width: 12em;
+
+  overflow: visible;
+  padding-right: 0;
+
+  @include media($menu-brakpoint) {
+    position: relative;
+  }
+
+  .hover-menu-item {
+    left: 0;
+    position: relative;
+
+    &::after {
+      content: "›";
+      padding-left: 0.5em;
+    }
+  }
+
+  .sub-menu {
+    display: none;
+    margin: 0;
+    padding-left: 0;
+	background-color: $menu-background-color;
+
+    @include media($menu-brakpoint) {
+      left: 0;
+      position: absolute;
+    }
+  }
+
+  .sub-menu li {
+    display: block;
+    padding-right: 0;
+  }
+
+  .sub-menu li a {
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+	padding: 0.5em;
+
+    @include media($menu-brakpoint) {
+      text-align: left;
+      width: $sub-menu-width;
+    }
+  }
+
+  .sub-menu .sub-menu {
+    @include media($menu-brakpoint) {
+      left: $sub-menu-width;
+      top: 0;
+    }
+  }
+
+  &:focus > .sub-menu,
+  &:hover > .sub-menu {
+    display: block;
+  }
+}
+/* site title */
+.site-header {
+	padding: $base-spacing 0;
+	.brand {
+		@extend %h1;
+		color: $base-font-color;
+	}
+}

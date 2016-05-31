@@ -59,7 +59,7 @@ function widgets_init() {
     'id'            => 'sidebar-primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
+    'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>'
   ]);
 
@@ -68,7 +68,7 @@ function widgets_init() {
     'id'            => 'sidebar-footer',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
+    'before_title'  => '<h3 class="footer-widget-title">',
     'after_title'   => '</h3>'
   ]);
 }
@@ -101,6 +101,7 @@ function assets() {
     wp_enqueue_script('comment-reply');
   }
 
+  wp_enqueue_script('sage/custom', Assets\asset_path('scripts/custom.js'), ['jquery'], null, true);
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

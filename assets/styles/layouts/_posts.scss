@@ -1,0 +1,32 @@
+/* post title */
+.post {
+	header {
+		border-bottom: $base-border;
+		margin-bottom: $small-spacing;
+	}
+}
+.entry-title {
+	@extend %h3;
+	margin-bottom: $small-spacing * 0.5;
+}
+/* post content */
+.gallery {
+	@include outer-container;
+}
+.gallery-item {
+	@include span-columns(2 of 8);
+	@include omega(3n);
+	margin-bottom: $small-spacing;
+  figcaption  {
+	@extend %medium-text;
+  }
+}
+/* entry meta */
+.post-info {
+	margin-bottom: $small-spacing;
+	color: $secondary-font-color;
+	p {
+		margin-bottom: 0;
+		@extend %medium-text;
+	}
+}

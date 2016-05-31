@@ -19,9 +19,12 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+    "custom.js": {
+      "vendor": ["assets/plugin-scripts/jquery.slicknav.js"]
     }
   },
   "config": {
-    "devUrl": "http://example.dev"
+    "devUrl": "http://wordpress-test2.dev"
   }
 }

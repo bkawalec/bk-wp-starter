@@ -1,19 +1,29 @@
+.comment-reply-title {
+	@extend %h5;
+}
+.comment-notes {
+	@extend %medium-text;
+	color: $secondary-font-color;
+}
 .comment-list {
-  @include list-unstyled;
+  // @include list-unstyled;
+  // list-style: none;
+  // padding: 0;
 }
 .comment-list ol {
   list-style: none;
 }
 .comment-form p {
-  @extend .form-group;
+  // @extend .form-group;
 }
 .comment-form input[type="text"],
 .comment-form input[type="email"],
 .comment-form input[type="url"],
 .comment-form textarea {
-  @extend .form-control;
+  // @extend .form-control;
 }
 .comment-form input[type="submit"] {
-  @extend .btn;
-  @extend .btn-primary;
+//  @extend .btn;
+//  @extend .btn-primary;
+//  @extend %btn-standard;
 }

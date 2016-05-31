@@ -1,11 +1,18 @@
-@import "common/variables";
+// Override variables for Bourbon and Neat
+// @import "base/variables";
+// @import "common/variables";
+@import "common/universal-reset";
+@import "base/variables";
 
-// Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 // endbower
-
-@import "common/global";
+@import "base/grid-settings";
+@import "base/base";
+// @import "common/global";
+@import "slicknav/slicknav"; // responsive navigaton
+// @import "components/slimmenu";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
@@ -17,3 +24,5 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+

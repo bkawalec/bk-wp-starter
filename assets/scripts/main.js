@@ -73,5 +73,11 @@
 
   // Load Events
   $(document).ready(UTIL.loadEvents);
+  
+  $(function(){
+		$('#menu-main').slicknav({
+			
+		});
+	});
 
 })(jQuery); // Fully reference jQuery after this point.
