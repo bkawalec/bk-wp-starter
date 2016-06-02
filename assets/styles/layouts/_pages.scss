@@ -2,9 +2,19 @@
 .page-header {
 	h1 {
 		@extend %h2;
+		.archive & {
+			@extend %h4;
+		}
 	}
+
 }
 /* page content wrap */
 .for-content {
 	padding-bottom: 2 * $base-spacing;
+}
+/* page 404 */
+.error404 {
+	.alert {
+		margin-bottom: $base-spacing;
+	}
 }

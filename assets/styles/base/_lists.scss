@@ -17,3 +17,23 @@ dt {
 dd {
   margin: 0;
 }
+%default-ul {
+	list-style-type: disc;
+    margin-bottom: $small-spacing;
+    padding-left: $base-spacing;
+	li li { // nested lists
+		list-style-type: circle;
+	}
+	li li li { // nested lists
+		list-style-type: square;
+	}
+}
+%default-ol {
+	list-style-type: decimal;
+    margin-bottom: $small-spacing;
+    padding-left: $base-spacing;
+	li li { // nested lists
+		list-style-type: lower-latin;
+	}
+
+}

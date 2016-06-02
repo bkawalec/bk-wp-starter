@@ -1,13 +1,40 @@
 /* post title */
 .post {
 	header {
-		border-bottom: $base-border;
-		margin-bottom: $small-spacing;
+		.single & { // on single post page
+			border-bottom: $base-border;
+			margin-bottom: $small-spacing;
+		}
 	}
+	border-bottom: $base-border;
+	padding-bottom: $small-spacing;
+	margin-bottom: $base-spacing;
+	.single & { // on single post page
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	.main &:last-child {
+		border-bottom: none;
+	}
+}
+/* post read more link */
+.read-more-link-wrap {
+	display: block;
+	padding-top: $small-spacing;
+}
+/* post */
+.entry-content {
+	margin-bottom: $base-spacing;
 }
 .entry-title {
 	@extend %h3;
 	margin-bottom: $small-spacing * 0.5;
+	a {
+		color: inherit;
+	}
+	.single & { // on single post page
+		@extend %h2;
+	}
 }
 /* post content */
 .gallery {
@@ -19,6 +46,7 @@
 	margin-bottom: $small-spacing;
   figcaption  {
 	@extend %medium-text;
+	color: $secondary-font-color;
   }
 }
 /* entry meta */
@@ -28,5 +56,59 @@
 	p {
 		margin-bottom: 0;
 		@extend %medium-text;
+	}
+}
+/* post navigation */
+.nav-links {
+	@include clearfix;
+	.nav-previous {
+		float: left;
+	}
+	.nav-next {
+		float: right;
+	}
+}
+/* entry content type */
+.entry-content {
+	h1 {
+	  @extend %h1; // 16 * 2.25 = 36px
+	}
+
+	h2 {
+	  @extend %h2; // 16 * 2 = 32px
+	}
+
+	h3 {
+	  @extend %h3; // 16 * 1.75 = 28px
+	}
+
+	h4 {
+	  @extend %h4; // 16 * 1.5 = 24px
+	}
+
+	h5 {
+	  @extend %h5; // 16 * 1.25 = 20px
+	}
+
+	h6 {
+	  @extend %h6;
+	  text-transform: uppercase;
+	}
+	ul {
+	  @extend %default-ul;
+	}
+	ol {
+	  @extend %default-ol;
+	}
+	blockquote {
+		font-style: italic;
+		padding-left: $small-spacing;
+		border-left: $base-border;
+	}
+	cite {
+		text-transform: uppercase;
+		@extend %small-text;
+		color: $secondary-font-color;
+		padding-left: $small-spacing;
 	}
 }

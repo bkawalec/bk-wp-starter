@@ -11,10 +11,63 @@
 .widget_archive {
 	ul {
 		color: $secondary-font-color;
+		li {
+			margin-bottom: $tiny-spacing;
+		}
 	}
 }
 .widget_recent_comments {
 	ul {
 		color: $secondary-font-color;
+		li {
+			margin-bottom: $tiny-spacing;
+		}
+	}
+}
+.widget_recent_entries {
+	ul {
+		color: $secondary-font-color;
+		li {
+			margin-bottom: $tiny-spacing;
+		}
+	}
+}
+.widget_categories {
+	ul {
+		color: $secondary-font-color;
+		li {
+			margin-bottom: $tiny-spacing;
+		}
+	}
+}
+.widget_nav_menu {
+	ul {
+		color: $secondary-font-color;
+		li {
+			margin-bottom: $tiny-spacing;
+		}
+	}
+}
+.widget_tag_cloud {
+	.tagcloud {
+	}
+}
+.widget_calendar {
+	caption {
+		font-weight: bold;
+	}
+	td, th {
+		@extend %medium-text;
+	}
+	#prev {
+	
+	}
+	#next {
+	
+	}
+	tfoot {
+		td {
+			border-bottom: none;
+		}
 	}
 }

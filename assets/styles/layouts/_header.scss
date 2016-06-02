@@ -20,8 +20,11 @@ $menu-selected-color: shade($menu-text-color, 40%);
 		display: inline-block;
 	}
 	.current-menu-item { // current page
-		a {
+		> a {
 			color: $menu-selected-color;
+			&::after {
+				color: inherit;
+			}
 		}
 	}
 	@include media($medium-screen-up) {
@@ -40,13 +43,14 @@ $menu-selected-color: shade($menu-text-color, 40%);
     position: relative;
   }
 
-  .hover-menu-item {
+  a {
     left: 0;
     position: relative;
 
     &::after {
       content: "›";
       padding-left: 0.5em;
+	  color: inherit;
     }
   }
 

@@ -9,6 +9,10 @@
 @import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 // endbower
 @import "base/grid-settings";
+// bower:scss
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
+// endbower
 @import "base/base";
 // @import "common/global";
 @import "slicknav/slicknav"; // responsive navigaton

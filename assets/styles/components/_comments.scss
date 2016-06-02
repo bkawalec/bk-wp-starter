@@ -1,17 +1,59 @@
 .comment-reply-title {
 	@extend %h5;
 }
+.comment-list-title {
+	@extend %h5;
+}
 .comment-notes {
 	@extend %medium-text;
 	color: $secondary-font-color;
 }
+.comment-author {
+	.avatar-32, .avatar-96 {
+		// display: inline-block;
+		float: left;
+		width: 3em;
+		height: 3em;
+		border-radius: 50%;
+		margin-right: $small-spacing;
+		vertical-align: middle;
+	}
+	.says {
+		color: $secondary-font-color;
+	}
+}
+.comment-metadata {
+	margin-left: 3em + $small-spacing;
+	@extend %medium-text;
+}
+.comment-content {
+	clear: both;
+	padding-top: $small-spacing;
+}
 .comment-list {
-  // @include list-unstyled;
-  // list-style: none;
-  // padding: 0;
+	border-top: $base-border;
+	padding-top: $base-spacing;
+	.comment {
+		padding-bottom: $small-spacing;
+		margin-bottom: $base-spacing;
+	}
+	> li.comment {
+		border-bottom: $base-border;
+	}
+	.children {
+		// border-top: $base-border;
+		padding-top: $small-spacing;
+		margin-top: $small-spacing;
+		margin-left: $base-spacing;
+		li:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+.comment-reply-link {
+	@extend %medium-text;
 }
 .comment-list ol {
-  list-style: none;
 }
 .comment-form p {
   // @extend .form-group;
@@ -26,4 +68,13 @@
 //  @extend .btn;
 //  @extend .btn-primary;
 //  @extend %btn-standard;
+}
+.comment-respond { // respond to comment
+	padding-top: $small-spacing;
+	padding-bottom: $small-spacing;
+	.comment-reply-title {
+		small {
+			float: right;
+		}
+	}
 }
