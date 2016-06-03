@@ -8,7 +8,7 @@
     </nav>
 	<div class="site-header">
 		<div class="container">
-			<a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+			<a class="brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
 		</div>
   </div>
 </header>
