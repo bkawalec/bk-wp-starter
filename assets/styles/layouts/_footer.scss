@@ -24,4 +24,9 @@ body {
 .banner, .for-content, .site-footer {
   /* flex: 1; would be enough but it looks bad in IE */
   flex: 1 0 auto;
+  // flex: 1;
+
+}
+.for-content {
+	// flex: 4;
 }

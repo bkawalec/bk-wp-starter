@@ -18,7 +18,7 @@
 	margin-bottom: $base-spacing;
 	height: auto;
 }
-// @media (min-width: $screen-sm-min) {
+@include media($mini-screen-up) {
   // Only float if not on an extra small device
   .alignleft {
     float: left;
@@ -28,7 +28,13 @@
     float: right;
     margin-left: $base-spacing;
   }
-// }
+} // end media
+.sticky .posted-on {
+	display: none;
+}
+.bypostauthor {
+	@extend %medium-text;
+}
 
 // Captions
 .wp-caption {
