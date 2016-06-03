@@ -75,7 +75,7 @@
   $(document).ready(UTIL.loadEvents);
   
   $(function(){
-		$('#menu-main').slicknav({
+		$('.nav-primary .nav').slicknav({
 			
 		});
 	});

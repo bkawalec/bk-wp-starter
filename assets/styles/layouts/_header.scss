@@ -1,4 +1,4 @@
-/* #menu-main is the original menu */
+/* .nav-primary .nav is the original menu */
 $menu-background-color: $dark-gray;
 $menu-text-color: #fff;
 $menu-selected-color: shade($menu-text-color, 40%);
@@ -8,7 +8,7 @@ $menu-selected-color: shade($menu-text-color, 40%);
 		display:none;
 	} // media
 }
-#menu-main {
+.nav-primary .nav {
 	display:none;
 	background-color: $menu-background-color;
 	padding: 0.75em 0.25em;
@@ -32,7 +32,7 @@ $menu-selected-color: shade($menu-text-color, 40%);
 	} // media
 } 
 // on larger screens
-#menu-main .menu-item-has-children {
+.nav-primary .nav .menu-item-has-children {
   $menu-brakpoint: 50em !default;
   $sub-menu-width: 12em;
 
@@ -46,6 +46,8 @@ $menu-selected-color: shade($menu-text-color, 40%);
   a {
     left: 0;
     position: relative;
+  }
+  > a {
 
     &::after {
       content: "›";
