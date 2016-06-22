@@ -35,6 +35,14 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+  
+  // custom logo in theme customizer
+  add_image_size('sage-logo', 240, 90);
+  add_theme_support('custom-logo', array(
+	'size' => 'sage-logo',
+	'flex-width'  => true
+  ));
+
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
